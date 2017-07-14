@@ -39,7 +39,7 @@ export default (state = INITIAL_STATE, action) => {
         case LOGIN_ANDAMENTO:
             return { ...state, loadingLogin: true };
         case AUTENTICAR_SUCESSO:
-            return { ...state, loadingLogin: false };
+            return { ...state, ...INITIAL_STATE };
         case CADASTRO_ANDAMENTO:
             return { ...state, loadingCadastrar: true };
         default:

@@ -1,4 +1,5 @@
 import React from 'react';
+import firebase from 'firebase';
 import { View, Text, StatusBar, Image, TouchableHighlight } from 'react-native';
 import { TabBar } from 'react-native-tab-view';
 import { Actions } from 'react-native-router-flux';
@@ -26,7 +27,14 @@ const TabBarMenu = props => (
                     </TouchableHighlight>
                 </View>
                 <View style={{ justifyContent: 'center' }}>
-                    <Text style={{ fontSize: 20, color: '#fff' }}>Sair</Text>
+                    <TouchableHighlight
+                        onPress={() => firebase.auth().signOut()
+                            .then(() => Actions.login())} 
+                        underlayColor="#114D44"
+                        style={{ alignItems: 'center' }}
+                    >
+                        <Text style={{ fontSize: 20, color: '#fff' }}>Sair</Text>
+                    </TouchableHighlight>
                 </View>
             </View>
         </View>

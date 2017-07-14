@@ -6,6 +6,7 @@ import FormCadastro from './components/Cadastro/FormCadastro';
 import BoasVindas from './components/Cadastro/BoasVindas';
 import Principal from './components/AppPrincipal/Principal';
 import AddContato from './components/AppPrincipal/AdicionarContato';
+import Conversa from './components/AppPrincipal/Conversa';
 
 export default props => (
   <Router 
@@ -19,5 +20,6 @@ export default props => (
     <Scene key='boasVindas' component={BoasVindas} title='Bem Vindo' hideNavBar />
     <Scene key='principal' component={Principal} title='WhatsApp Clone' hideNavBar />
     <Scene key='adicionarContato' component={AddContato} title='Adicionar Contato' hideNavBar={false} leftButtonIconStyle={{ tintColor: '#FFF' }} />
+    <Scene key='conversa' component={Conversa} title='Conversa' hideNavBar={false} leftButtonIconStyle={{ tintColor: '#FFF' }} />
   </Router>
 );
